@@ -1,13 +1,23 @@
 <html>
 <head></head>
 <body>
+
     Dados enviados:
     <br />
     <br />
-    Nome: <?php echo $_POST['user']; ?> 
+    Nome: <?php
+                global $user;
+                $user = $_POST['user'];
+                echo $user ?> 
     <br />
-    Password: <?php echo $_POST['pass']; ?> 
+    Password: <?php
+                    global $pass;
+                    $pass = $_POST['pass'];
+                    echo $pass ?> 
     <br />
-    Data de nascimento: <?php echo $_POST['date']; ?>
+    Data de nascimento: <?php
+                            global $date;
+                            $date = $_POST['date'];
+                            echo $date ?>
 </body>
 </html>

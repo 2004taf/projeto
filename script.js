@@ -2,7 +2,6 @@ $(document).ready(function(){
     $.fn.darkmode = function(){
         $("#img").click(function(){
             var img;
-
             if($(this).attr("src") == "images/white mode.png"){
                 img = "images/dark mode.png";
                 $(this).attr("src", img)
@@ -20,11 +19,12 @@ $(document).ready(function(){
     // AJAX PART
     var uName = $("input[name=user]").val();
     var passwrd = $("input[name=pass]").val();
+    var dat = $("input[name=date").val();
     $("#formDetails").submit(function(){
         $.ajax({
             type: 'POST',
             url: 'process.php',
-            data: {"username": uName, "password": passwrd},
+            data: {"user": uName, "pass": passwrd, "date": dat},
             success : function(data) {
                 $('.mensagem').html(data);
                 $('.mensagem').show();
