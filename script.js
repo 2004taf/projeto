@@ -1,5 +1,4 @@
 $(document).ready(function(){
-    
     $.fn.darkmode = function(){
         $("#img").click(function(){
             var img;
@@ -18,16 +17,26 @@ $(document).ready(function(){
         });
     }
     $("input[type=img]").darkmode();
-
-    var action = $('form').attr('action');
-    $('form').attr('action','javascript:void(0);');
     // AJAX PART
-
-    $('input[type=submit]').submit(function(){
-        $.post(action, jQuery('form').serialize(), function(data){
-            $('.mensagem').html(data);
-            $('.mensagem').show();
+    var uName = $("input[name=user]").val();
+    var passwrd = $("input[name=pass]").val();
+    $("#formDetails").submit(function(){
+        $.ajax({
+            type: 'POST',
+            url: 'process.php',
+            data: {"username": uName, "password": passwrd},
+            success : function(data) {
+                $('.mensagem').html(data);
+                $('.mensagem').show();
+           },
+            error: function (xhr,ajaxOptions,throwError){
+                alert("erro");
+          },
         });
-        return null;
+        return false;
     });
+
+    $( function() {
+        $( "#draggable" ).draggable();
+      } );
 });

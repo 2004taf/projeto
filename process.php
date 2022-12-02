@@ -4,8 +4,8 @@
     Dados enviados:
     <br />
     <br />
-    <?php echo 'Nome: '.$_POST['username']; ?> 
+    Nome: <?php echo $_POST['user']; ?> 
     <br />
-    <?php echo 'Password: '$_POST['password']; ?> 
+    Password: <?php echo $_POST['pass']; ?> 
 </body>
 </html>
