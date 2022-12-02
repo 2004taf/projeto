@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    
     $.fn.darkmode = function(){
         $("#img").click(function(){
             var img;
@@ -17,11 +18,12 @@ $(document).ready(function(){
         });
     }
     $("input[type=img]").darkmode();
+
     var action = $('form').attr('action');
-    $('form').attr('action','process.php');
+    $('form').attr('action','javascript:void(0);');
     // AJAX PART
 
-    $("#submit").click(function(){
+    $('input[type=submit]').submit(function(){
         $.post(action, jQuery('form').serialize(), function(data){
             $('.mensagem').html(data);
             $('.mensagem').show();

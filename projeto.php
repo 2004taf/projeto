@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -14,7 +13,7 @@
     </div>
 
     <div>
-        <p class="mensagem" id="mensagem"> </p>
+        <p class="mensagem"> </p>
     </div>
     <form method="post">
 
@@ -24,7 +23,7 @@
         <label for="password">Password: </label> <br>
         <input type="password" id="password" placeholder="password"> <br> <br>
 
-        <input type="button" value="Submit" id="submit"/>
+        <input type="submit" value="Submit" id="submit"/>
     </form>
     <img src="images/white mode.png" id="img" class="off"/>
 </body>
