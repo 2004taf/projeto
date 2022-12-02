@@ -39,4 +39,12 @@ $(document).ready(function(){
     $( function() {
         $( "#draggable" ).draggable();
       } );
+
+    $( function(){
+        $("#datepicker").datepicker();
+    });
+
+    $('#btn').click(function(){
+        $('.mensagem').toggle('clip');
+    })
 });

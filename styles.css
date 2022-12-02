@@ -28,3 +28,8 @@ body #name #password{
     width: 400px;
     border-radius: 15px;
 }
+
+body{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
