@@ -94,6 +94,7 @@ $(document).ready(function(){
         $('#memeimg').fadeIn(1000);
         
     })
+    
     $("#back").click(function(){
         $('audio#song')[0].pause();
         $('#memeimg').fadeOut(1000);
