@@ -12,6 +12,8 @@ $(document).ready(function(){
                 $("body").addClass("test");
                 $(".mensagem").removeClass("mensagem").addClass("back");
                 $(".port").removeClass("port").addClass("portu");
+                $(".footer").removeClass("footer").addClass("footerw");
+                $(".link_pt").removeClass("link_pt").addClass("link_ptw")
 
             } else {
                 $("body").animate({
@@ -23,6 +25,8 @@ $(document).ready(function(){
                 $("body").removeClass("test");
                 $(".back").removeClass("back").addClass("mensagem");
                 $(".portu").removeClass("portu").addClass("port");
+                $(".footerw").removeClass("footerw").addClass("footer");
+                $(".link_ptw").removeClass("link_ptw").addClass("link_pt");
             }
             state = !state;
         });
@@ -36,7 +40,7 @@ $(document).ready(function(){
         $.ajax({
             type: 'POST',
             url: 'process.php',
-            data: {"user": uName, "pass": passwrd, "date": dat},
+            data: $("form").serialize(),
             success : function(data) {
                 if($("#mensagem").hasClass('mensagem')){
                     $(".mensagem").html(data);
@@ -45,7 +49,6 @@ $(document).ready(function(){
                     $(".back").html(data);
                     $(".back").show();
                 }
-                    
            },
             error: function (xhr,ajaxOptions,throwError){
                 alert("erro");
@@ -70,7 +73,7 @@ $(document).ready(function(){
         }
     })
 
-    $("#link_p").click(function(){
+    $("p").delegate('a', 'click', function(){
         if($("div").hasClass('port')){
             $(".port").css("background-color", "red");
         } else {

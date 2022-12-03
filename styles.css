@@ -66,3 +66,45 @@ img{
     left: 1700px;
     bottom: 700px;
 }
+
+.footer a{
+    color: #fff;
+}
+
+.footerw a{
+    color: #000;
+}
+
+.footer{
+        background-color: #000;
+        position: fixed;
+        width: 100%;
+        color: #fff;
+        text-align: center;
+        justify-content: center;
+        padding: 10px 0;
+        margin: -0.4%;
+        bottom: -0.4%;
+        height: 5%;
+}
+
+.footerw{
+    background-color: #fff;
+    position: fixed;
+    width: 100%;
+    color: #000;
+    text-align: center;
+    justify-content: center;
+    padding: 10px 0;
+    margin: -0.4%;
+    bottom: -0.4%;
+    height: 5%;
+}
+
+.link_pt{
+    color: #000;
+}
+
+.link_ptw{
+    color: #fff;
+}
