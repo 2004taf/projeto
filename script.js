@@ -10,7 +10,9 @@ $(document).ready(function(){
                 img = "images/dark mode.png";
                 $("#img").attr("src", img)
                 $("body").addClass("test");
-                $(".mensagem").addClass("back").removeClass("mensagem");
+                $(".mensagem").removeClass("mensagem").addClass("back");
+                $(".port").removeClass("port").addClass("portu");
+
             } else {
                 $("body").animate({
                     "background-color": "white",
@@ -20,6 +22,7 @@ $(document).ready(function(){
                 $("#img").attr("src", img)
                 $("body").removeClass("test");
                 $(".back").removeClass("back").addClass("mensagem");
+                $(".portu").removeClass("portu").addClass("port");
             }
             state = !state;
         });
@@ -66,4 +69,19 @@ $(document).ready(function(){
             $('.back').toggle('clip');
         }
     })
+
+    $("#link_p").click(function(){
+        if($("div").hasClass('port')){
+            $(".port").css("background-color", "red");
+        } else {
+            $(".portu").css("background-color", "red");
+        }
+        
+    });
+
+
+    $("#p_y").click(function(){
+        $(this).prev().css("background-color", "green");
+        $(this).css("background-color", "yellow");
+    });
 });
