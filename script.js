@@ -1,5 +1,6 @@
 $(document).ready(function(){
     var state, effect = true;
+
     $.fn.darkmode = function(){
         $("#img").click(function(){
             if (state){
@@ -31,14 +32,13 @@ $(document).ready(function(){
             state = !state;
         });
     }
+
     $("input[type=img]").darkmode();
+
     // AJAX PART
     var uName = $("input[name=user]").val();
     var passwrd = $("input[name=pass]").val();
     var dat = $("input[name=date").val();
-    $('#datepicker').datepicker({
-        dateFormat: 'dd/mm/yy'
-    })
 
     $("#formDetails").submit(function(){
         $.ajax({
@@ -61,16 +61,6 @@ $(document).ready(function(){
         return false;
     });
 
-    $( function() {
-        $( "#draggable" ).draggable();
-      } );
-
-    $( function(){
-        $("#datepicker").datepicker();
-    });
-
-    
-
     $('#btn').click(function(){
         if($("#mensagem").hasClass('mensagem')){
                 $('.mensagem').show('clip', {direction: "vertical"}, 500).delay(3000).hide('clip', {direction: 'vertical'}, 500);
@@ -91,5 +81,30 @@ $(document).ready(function(){
     $("#p_y").click(function(){
         $(this).prev().css("background-color", "green");
         $(this).css("background-color", "yellow");
+    });
+
+    $('#datepicker').datepicker({
+        dateFormat: 'dd/mm/yy'
+    })
+
+    $("#easter").on('click', function(){
+        $('audio#song')[0].play();
+        $('audio#song').prop('volume', 0.05);
+        $('#back').show();
+        $('#memeimg').fadeIn(1000);
+        
+    })
+    $("#back").click(function(){
+        $('audio#song')[0].pause();
+        $('#memeimg').fadeOut(1000);
+        $('#back').hide();
+    })
+
+    $( function() {
+        $( "#draggable" ).draggable();
+      } );
+
+    $( function(){
+        $("#datepicker").datepicker();
     });
 });
