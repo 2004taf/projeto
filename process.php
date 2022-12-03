@@ -8,7 +8,7 @@
     Nome: <?php
                 global $user;
                 $user = $_POST['user'];
-                echo $user ?> 
+                echo ucfirst($user) ?> 
     <br />
     Password: <?php
                     global $pass;
