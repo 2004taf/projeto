@@ -1,6 +1,20 @@
 $(document).ready(function(){
     $.fn.darkmode = function(){
         $("#img").click(function(){
+            var state = true;
+
+            if (state){
+                $("body").animate({
+                    "background-color": "black",
+                    "color": "white",
+                }, 1000);
+            } else {
+                $("body").animate({
+                    "background-color": "white",
+                    "color": "black",
+                }, 1000);
+            }
+            /*
             var img;
             if($(this).attr("src") == "images/white mode.png"){
                 img = "images/dark mode.png";
@@ -10,11 +24,13 @@ $(document).ready(function(){
             } else {
                 img = "images/white mode.png";
                 $(this).attr("src", img)
-                $("body").removeClass("test").removeClass("body");
+                $("body").removeClass("test");
                 $(".back").removeClass("back").addClass("mensagem");
             }
+            */
         });
     }
+    
     $("input[type=img]").darkmode();
     // AJAX PART
     var uName = $("input[name=user]").val();
@@ -26,8 +42,14 @@ $(document).ready(function(){
             url: 'process.php',
             data: {"user": uName, "pass": passwrd, "date": dat},
             success : function(data) {
-                $('.mensagem').html(data);
-                $('.mensagem').show();
+                if(("#mensagem").className === "mensagem"){
+                    $('.mensagem').html(data);
+                    $('.mensagem').show();
+                } else {
+                    $('.back').html(data);
+                    $('.back').show();
+                }
+                
            },
             error: function (xhr,ajaxOptions,throwError){
                 alert("erro");
