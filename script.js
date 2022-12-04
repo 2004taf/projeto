@@ -68,7 +68,7 @@ $(document).ready(function(){
     // animação do retângulo das informações do HTML para o PHP
     $('#btn').click(function(){
         if($("#mensagem").hasClass('mensagem')){
-                $('.mensagem').show('clip', {direction: "vertical"}, 500).delay(3000).hide('clip', {direction: 'vertical'}, 500);
+            $('.mensagem').show('clip', {direction: "vertical"}, 500).delay(3000).hide('clip', {direction: 'vertical'}, 500);
         } else {
             $('.back').show('clip', {direction: "vertical"}, 500).delay(3000).hide('clip', {direction: 'vertical'}, 500);
         }

@@ -73,16 +73,16 @@ img{
 }
 
 .footer{
-        background-color: #000;
-        position: fixed;
-        width: 100%;
-        color: #fff;
-        text-align: center;
-        justify-content: center;
-        padding: 10px 0;
-        margin: -0.4%;
-        bottom: -0.4%;
-        height: 5%;
+    background-color: #000;
+    position: fixed;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    justify-content: center;
+    padding: 10px 0;
+    margin: -0.4%;
+    bottom: -0.4%;
+    height: 5%;
 }
 
 .footerw{
