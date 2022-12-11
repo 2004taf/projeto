@@ -15,10 +15,11 @@ body #name #password{
 
 .mensagem{
     display: none;
-    border: 1px solid #000;
-    padding: 15px; 
-    width: 400px;
+    border: 2px solid #000;
+    padding: 16px; 
+    width: 365px;
     border-radius: 15px;
+    height: 435px;
 }
 
 .back{
@@ -26,7 +27,7 @@ body #name #password{
     border: 1px solid #fff;
     padding: 15px;
     width: 400px;
-    border-radius: 15px;
+    border-radius: 15px;    
 }
 
 body{
@@ -106,23 +107,44 @@ img{
     color: #fff;
 }
 
-#easter{
-    position: fixed;
-    font-size: 20;
-    top: 910px;
-    left: 1890px;
+h1{
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
 }
 
-#memeimg{
-    display: none;
-    width: 500px;
-    height: 500px;
-    top: 300px;
-    left: 680px;
+#formDetails{
+    text-align: center;
 }
 
-#back{
-    display: none;
-    width: 150px;
-    height: 50px;
+
+.form1{
+    border: 2px solid #000;
+    padding: 15px; 
+    width: 400px;
+    height: 550px;
+    border-radius: 15px;
+}
+
+.form1 h1{
+    text-align: center;
+    font-size: 10;
+}
+
+#showinfo{
+    align-self: center;
+}
+
+.form2{
+    border: 2px solid #000;
+    padding: 15px; 
+    width: 400px;
+    height: 550px;
+    border-radius: 15px;
+}
+
+#form-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 5px;
 }
