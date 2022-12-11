@@ -1,4 +1,7 @@
 #img{
+    position: fixed;
+    left: 890px;
+    bottom: 570px;
     width: 150px;
     height: 150px;
 }
@@ -35,36 +38,6 @@ body{
     overflow-x: hidden;
 }
 
-#bandeira{
-    position: fixed;
-    left: 1400px;
-    bottom: 850px;
-}
-
-.port{
-    top: 1000px;
-    border: 1px solid #000;
-    display: inline-block;
-    padding: 0px;
-}
-
-.portu{
-    border: 1px solid #fff;
-    display: inline-block;
-    padding: 0px;
-}
-
-#link_p{
-    position: fixed;
-    left: 1340px;
-    bottom: 940px;
-}
-img{
-    position: fixed;
-    left: 1700px;
-    bottom: 700px;
-}
-
 .footer a{
     color: #fff;
 }
@@ -99,14 +72,6 @@ img{
     height: 5%;
 }
 
-.link_pt{
-    color: #000;
-}
-
-.link_ptw{
-    color: #fff;
-}
-
 h1{
     font-size: 30px;
     font-weight: bold;
@@ -115,36 +80,4 @@ h1{
 
 #formDetails{
     text-align: center;
-}
-
-
-.form1{
-    border: 2px solid #000;
-    padding: 15px; 
-    width: 400px;
-    height: 550px;
-    border-radius: 15px;
-}
-
-.form1 h1{
-    text-align: center;
-    font-size: 10;
-}
-
-#showinfo{
-    align-self: center;
-}
-
-.form2{
-    border: 2px solid #000;
-    padding: 15px; 
-    width: 400px;
-    height: 550px;
-    border-radius: 15px;
-}
-
-#form-container{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 5px;
 }

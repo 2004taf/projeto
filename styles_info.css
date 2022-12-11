@@ -1,0 +1,66 @@
+.form1{
+    border: 2px solid #000;
+    padding: 15px; 
+    width: 400px;
+    height: 550px;
+    border-radius: 15px;
+}
+
+.form1 h1{
+    text-align: center;
+    font-size: 10;
+}
+
+#showinfo{
+    align-self: center;
+}
+
+.form2{
+    border: 2px solid #000;
+    padding: 15px; 
+    width: 100vh;
+    height: 550px;
+    border-radius: 15px;
+}
+
+#form-container{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-column-gap: 0px;
+    justify-content: center;
+    align-items: center;
+    align-content: stretch;
+}
+
+h1{
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+}
+
+#personal{
+    margin-left: 15px;
+}
+
+#info{
+    margin-left: 280px;
+}
+
+.footer{
+    background-color: #000;
+    position: fixed;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    justify-content: center;
+    padding: 10px 0;
+    margin: -0.4%;
+    bottom: -0.4%;
+    height: 5%;
+}
+
+.footer a{
+    color: #fff;
+}
+
