@@ -7,7 +7,7 @@
                     $user = $_POST['user']; 
                     echo ucfirst($user);
                 }
-                ?> 
+                ?>
     <br />
     Password: <?php
                     global $pass;
