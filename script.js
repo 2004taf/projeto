@@ -36,7 +36,7 @@ $(document).ready(function(){
 
     // criação da funcão darkmode
     $.fn.darkmode = function(){
-        $("#img").click(function(){
+        $("img").click(function(){
             if (state){
                 // animação  da muda de cor do body para dark mode
                 $("body").animate({
@@ -49,7 +49,7 @@ $(document).ready(function(){
                 $(".footer").removeClass("footer").addClass("footerw");
                 $(".link_pt").removeClass("link_pt").addClass("link_ptw")
                 img = "images/dark mode.png";
-                $("#img").attr("src", img)
+                $("img").attr("src", img)
 
             } else {
                 // animação  da muda de cor do body para white mode
@@ -63,7 +63,7 @@ $(document).ready(function(){
                 $(".footerw").removeClass("footerw").addClass("footer");
                 $(".link_ptw").removeClass("link_ptw").addClass("link_pt");
                 img = "images/white mode.png";
-                $("#img").attr("src", img)
+                $("img").attr("src", img)
             }
             state = !state;
         });
