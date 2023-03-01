@@ -1,18 +1,20 @@
-$(document).ready(function(){
+$(document).ready(function () {
    $('#dados').load('process.php');
    $('#dados').show();
 
-   $('#highlight').click(function(){
+   $('#highlight').click(function () {
       $(".port").css("color", "red");
    })
 
-   $('#amarilo').click(function(){
+   $('#amarilo').click(function () {
       $('p').first().css("color", "green");
       $(this).css("color", "yellow");
    })
 
-   $.fn.highlight = function(){
-      $('#highlightButton').click(function(){
+   // highlight
+
+   $.fn.highlight = function () {
+      $('#highlightButton').click(function () {
          $(".port").find(".highlight").removeClass("highlight");
 
          var searchword = $("#text").val();
@@ -21,7 +23,7 @@ $(document).ready(function(){
          var repstr = "<span class='highlight'>" + searchword + "</span>";
 
          if (searchword != "") {
-            $('body').each(function() {
+            $('body').each(function () {
                $(this).html($(this).html().replace(custfilter, repstr));
             });
          }
